@@ -1,0 +1,217 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header styles */
+#main-header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+#main-header h1 {
+    margin: 0;
+}
+
+#main-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#main-nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+#main-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main content styles */
+#main-content {
+    padding: 2rem 0;
+}
+.title {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+.title a {
+    color: orangered;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 900;
+}
+.carousel-section {
+    margin-bottom: 3rem;
+}
+
+.carousel-container {
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    gap: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 33%;
+    height: 250px;
+    margin-right: 0rem;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.carousel-item.product-item {
+    height: 300px;
+}
+.carousel-item.product-item .actions {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-between;
+}
+.carousel-item.product-item .actions a {
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 10px;
+    height: 40px;
+    margin-top: -25px;
+    padding: 5px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.carousel-item.product-item img {
+    height: 65%;
+    display: flex;
+    margin: 2%;
+    width: 96%;
+}
+.like-form {
+    margin-right: 4%;
+    display: flex;
+    align-items: center;
+    width: 16%;            
+    font-size: 25px;
+    justify-content: space-between;
+    text-decoration: none;
+}
+.like-form a i {
+    margin-top: 5px;
+    color: #ff4500;
+}
+.like-button {
+    color: black;
+    margin-top: -19px;
+    background-color: transparent;
+    outline:none ;
+    border: none;
+    font-size: 25px;
+    text-align:center ;
+}
+.like-button:disabled {
+    color: red; /* Light gray color for disabled state */
+}
+.carousel-item:hover {
+    transform: translateY(-5px);
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.item-info {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item-info a {
+    background-color: orangered;
+    padding:  5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #f0f0f0;
+}
+.carousel-item h3 {
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.carousel-item p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #666;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: orangered;
+    color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.carousel-button.prev {
+    left: 0;
+    z-index: 9999;
+}
+
+.carousel-button.next {
+    right: 0;
+    z-index: 9999;
+}
+
+/* Footer styles */
+#main-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .carousel-item {
+        width: 85%;
+        margin: 0 20px;
+    }
+}
